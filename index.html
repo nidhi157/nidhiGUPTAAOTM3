@@ -1,11 +1,351 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=this, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
- this site is under to construction   
-</body>
+```html
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+<title>EcoVolt | Sustainable Energy</title> 
+ 
+<style> 
+ 
+/* ========================= 
+   BASIC RESET 
+========================= */ 
+ 
+*{ 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+} 
+ 
+body{ 
+    font-family:Arial, Helvetica, sans-serif; 
+    background:#f3faf6; 
+    color:#163326; 
+} 
+ 
+ 
+/* ========================= 
+   HEADER 
+========================= */ 
+ 
+header{ 
+    width:100%; 
+    height:78px; 
+ 
+    background:#ffffff; 
+ 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+ 
+    padding:0 7%; 
+ 
+    border-bottom:1px solid #d8ebe0; 
+ 
+    position:fixed; 
+    top:0; 
+    left:0; 
+ 
+    z-index:1000; 
+} 
+ 
+ 
+/* ========================= 
+   LOGO 
+========================= */ 
+ 
+.logo{ 
+    font-size:27px; 
+    font-weight:800; 
+    letter-spacing:-1px; 
+ 
+    color:#163326; 
+} 
+ 
+.logo span{ 
+    color:#35a853; 
+} 
+ 
+ 
+/* ========================= 
+   NAVIGATION 
+========================= */ 
+ 
+nav ul{ 
+    list-style:none; 
+ 
+    display:flex; 
+ 
+    align-items:center; 
+ 
+    gap:35px; 
+} 
+ 
+nav ul li a{ 
+    text-decoration:none; 
+ 
+    color:#496357; 
+ 
+    font-size:15px; 
+ 
+    font-weight:600; 
+ 
+    transition:0.3s; 
+} 
+ 
+nav ul li a:hover{ 
+    color:#35a853; 
+} 
+ 
+ 
+/* ========================= 
+   ACTIVE PAGE 
+========================= */ 
+ 
+nav ul li a.active{ 
+    color:#35a853; 
+} 
+ 
+ 
+/* ========================= 
+   CONTACT BUTTON 
+========================= */ 
+ 
+.header-btn{ 
+    text-decoration:none; 
+ 
+    padding:11px 20px; 
+ 
+    border-radius:25px; 
+ 
+    background:#35a853; 
+ 
+    color:#ffffff; 
+ 
+    font-size:14px; 
+ 
+    font-weight:700; 
+ 
+    transition:0.3s; 
+} 
+ 
+.header-btn:hover{ 
+    background:#238b42; 
+ 
+    transform:translateY(-2px); 
+ 
+    box-shadow:0 5px 20px rgba(53,168,83,0.20); 
+} 
+ 
+ 
+/* ========================= 
+   MOBILE MENU BUTTON 
+========================= */ 
+ 
+.menu-btn{ 
+    display:none; 
+ 
+    background:none; 
+ 
+    border:none; 
+ 
+    color:#163326; 
+ 
+    font-size:27px; 
+ 
+    cursor:pointer; 
+} 
+ 
+ 
+/* ========================= 
+   RESPONSIVE 
+========================= */ 
+ 
+@media(max-width:800px){ 
+ 
+    header{ 
+        padding:0 5%; 
+    } 
+ 
+    .menu-btn{ 
+        display:block; 
+    } 
+ 
+    nav{ 
+        position:absolute; 
+ 
+        top:78px; 
+ 
+        left:0; 
+ 
+        width:100%; 
+ 
+        background:#ffffff; 
+ 
+        display:none; 
+ 
+        padding:25px 0; 
+ 
+        border-bottom:1px solid #d8ebe0; 
+    } 
+ 
+    nav.show{ 
+        display:block; 
+    } 
+ 
+    nav ul{ 
+        flex-direction:column; 
+ 
+        gap:22px; 
+    } 
+ 
+    .header-btn{ 
+        display:none; 
+    } 
+ 
+} 
+ 
+ 
+/* ========================= 
+   DEMO SPACE 
+========================= */ 
+ 
+main{ 
+    height:100vh; 
+ 
+    display:flex; 
+ 
+    justify-content:center; 
+ 
+    align-items:center; 
+ 
+    padding-top:78px; 
+ 
+    text-align:center; 
+} 
+ 
+main h1{ 
+    font-size:45px; 
+} 
+ 
+main h1 span{ 
+    color:#35a853; 
+} 
+ 
+</style> 
+ 
+</head> 
+ 
+ 
+<body> 
+ 
+ 
+<!-- ========================= 
+     HEADER 
+========================= --> 
+ 
+<header> 
+ 
+    <!-- LOGO --> 
+ 
+    <div class="logo"> 
+        Eco<span>Volt</span> 
+    </div> 
+ 
+ 
+    <!-- NAVIGATION --> 
+ 
+    <nav id="navbar"> 
+ 
+        <ul> 
+ 
+            <li> 
+                <a href="index.html" class="active"> 
+                    Home 
+                </a> 
+            </li> 
+ 
+            <li> 
+                <a href="solar.html"> 
+                    Solar Energy 
+                </a> 
+            </li> 
+ 
+            <li> 
+                <a href="wind.html"> 
+                    Wind Power 
+                </a> 
+            </li> 
+ 
+            <li> 
+                <a href="lifestyle.html"> 
+                    Green Lifestyle 
+                </a> 
+            </li> 
+ 
+        </ul> 
+ 
+    </nav> 
+ 
+ 
+    <!-- CONTACT BUTTON --> 
+ 
+    <a href="contact.html" class="header-btn"> 
+        Contact Us 
+    </a> 
+ 
+ 
+    <!-- MOBILE MENU --> 
+ 
+    <button class="menu-btn" onclick="toggleMenu()"> 
+        ☰ 
+    </button> 
+ 
+</header> 
+ 
+ 
+<!-- ========================= 
+     DEMO CONTENT 
+========================= --> 
+ 
+<main> 
+ 
+<div> 
+ <h1> 
+   Powering a 
+  <span>Greener Future</span> 
+   </h1> 
+ 
+ <p style="color:#6d897a;margin-top:12px;"> 
+  Clean Energy • Better Future 
+  </p> 
+ 
+ </div> 
+ 
+</main> 
+ 
+ 
+<!-- ========================= 
+     JAVASCRIPT 
+========================= --> 
+ 
+<script> 
+ 
+function toggleMenu(){ 
+ 
+    document 
+        .getElementById("navbar") 
+        .classList 
+        .toggle("show"); 
+ 
+} 
+ 
+</script> 
+ 
+ 
+</body> 
 </html>
+```
