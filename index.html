@@ -1,351 +1,962 @@
-```html
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
  
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
- 
-<title>EcoVolt | Sustainable Energy</title> 
- 
-<style> 
- 
-/* ========================= 
-   BASIC RESET 
-========================= */ 
- 
-*{ 
-    margin:0; 
-    padding:0; 
-    box-sizing:border-box; 
-} 
- 
-body{ 
-    font-family:Arial, Helvetica, sans-serif; 
-    background:#f3faf6; 
-    color:#163326; 
-} 
- 
- 
-/* ========================= 
-   HEADER 
-========================= */ 
- 
-header{ 
-    width:100%; 
-    height:78px; 
- 
-    background:#ffffff; 
- 
-    display:flex; 
-    align-items:center; 
-    justify-content:space-between; 
- 
-    padding:0 7%; 
- 
-    border-bottom:1px solid #d8ebe0; 
- 
-    position:fixed; 
-    top:0; 
-    left:0; 
- 
-    z-index:1000; 
-} 
- 
- 
-/* ========================= 
-   LOGO 
-========================= */ 
- 
-.logo{ 
-    font-size:27px; 
-    font-weight:800; 
-    letter-spacing:-1px; 
- 
-    color:#163326; 
-} 
- 
-.logo span{ 
-    color:#35a853; 
-} 
- 
- 
-/* ========================= 
-   NAVIGATION 
-========================= */ 
- 
-nav ul{ 
-    list-style:none; 
- 
-    display:flex; 
- 
-    align-items:center; 
- 
-    gap:35px; 
-} 
- 
-nav ul li a{ 
-    text-decoration:none; 
- 
-    color:#496357; 
- 
-    font-size:15px; 
- 
-    font-weight:600; 
- 
-    transition:0.3s; 
-} 
- 
-nav ul li a:hover{ 
-    color:#35a853; 
-} 
- 
- 
-/* ========================= 
-   ACTIVE PAGE 
-========================= */ 
- 
-nav ul li a.active{ 
-    color:#35a853; 
-} 
- 
- 
-/* ========================= 
-   CONTACT BUTTON 
-========================= */ 
- 
-.header-btn{ 
-    text-decoration:none; 
- 
-    padding:11px 20px; 
- 
-    border-radius:25px; 
- 
-    background:#35a853; 
- 
-    color:#ffffff; 
- 
-    font-size:14px; 
- 
-    font-weight:700; 
- 
-    transition:0.3s; 
-} 
- 
-.header-btn:hover{ 
-    background:#238b42; 
- 
-    transform:translateY(-2px); 
- 
-    box-shadow:0 5px 20px rgba(53,168,83,0.20); 
-} 
- 
- 
-/* ========================= 
-   MOBILE MENU BUTTON 
-========================= */ 
- 
-.menu-btn{ 
-    display:none; 
- 
-    background:none; 
- 
-    border:none; 
- 
-    color:#163326; 
- 
-    font-size:27px; 
- 
-    cursor:pointer; 
-} 
- 
- 
-/* ========================= 
-   RESPONSIVE 
-========================= */ 
- 
-@media(max-width:800px){ 
- 
-    header{ 
-        padding:0 5%; 
-    } 
- 
-    .menu-btn{ 
-        display:block; 
-    } 
- 
-    nav{ 
-        position:absolute; 
- 
-        top:78px; 
- 
-        left:0; 
- 
-        width:100%; 
- 
-        background:#ffffff; 
- 
-        display:none; 
- 
-        padding:25px 0; 
- 
-        border-bottom:1px solid #d8ebe0; 
-    } 
- 
-    nav.show{ 
-        display:block; 
-    } 
- 
-    nav ul{ 
-        flex-direction:column; 
- 
-        gap:22px; 
-    } 
- 
-    .header-btn{ 
-        display:none; 
-    } 
- 
-} 
- 
- 
-/* ========================= 
-   DEMO SPACE 
-========================= */ 
- 
-main{ 
-    height:100vh; 
- 
-    display:flex; 
- 
-    justify-content:center; 
- 
-    align-items:center; 
- 
-    padding-top:78px; 
- 
-    text-align:center; 
-} 
- 
-main h1{ 
-    font-size:45px; 
-} 
- 
-main h1 span{ 
-    color:#35a853; 
-} 
- 
-</style> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>GreenPulse | Sustainable Energy</title> 
+ 
+    <style> 
+ 
+        *{ 
+            margin:0; 
+            padding:0; 
+            box-sizing:border-box; 
+        } 
+ 
+        html{ 
+            scroll-behavior:smooth; 
+        } 
+ 
+        body{ 
+            font-family:Arial, Helvetica, sans-serif; 
+            background:#fffaf0; 
+            color:#263b2b; 
+        } 
+ 
+ 
+        /* ================= HEADER ================= */ 
+ 
+        header{ 
+            width:100%; 
+            height:75px; 
+            background:#ffffff; 
+            display:flex; 
+            align-items:center; 
+            justify-content:space-between; 
+            padding:0 7%; 
+            border-bottom:1px solid #e6eadf; 
+            position:fixed; 
+            top:0; 
+            left:0; 
+            z-index:1000; 
+        } 
+ 
+        .logo{ 
+            font-size:26px; 
+            font-weight:bold; 
+            color:#244b2c; 
+        } 
+ 
+        .logo span{ 
+            color:#e89b28; 
+        } 
+ 
+        nav ul{ 
+            display:flex; 
+            list-style:none; 
+            gap:30px; 
+        } 
+ 
+        nav ul li a{ 
+            text-decoration:none; 
+            color:#526356; 
+            font-size:14px; 
+            font-weight:600; 
+        } 
+ 
+        nav ul li a:hover{ 
+            color:#e89b28; 
+        } 
+ 
+        .contact-btn{ 
+            text-decoration:none; 
+            background:#2f7d46; 
+            color:white; 
+            padding:11px 20px; 
+            border-radius:6px; 
+            font-size:14px; 
+        } 
+ 
+        .menu-btn{ 
+            display:none; 
+            font-size:27px; 
+            border:none; 
+            background:none; 
+            cursor:pointer; 
+        } 
+ 
+ 
+        /* ================= HERO ================= */ 
+ 
+        .hero{ 
+            min-height:650px; 
+            padding:130px 7% 70px; 
+            display:flex; 
+            align-items:center; 
+            justify-content:space-between; 
+            gap:50px; 
+        } 
+ 
+        .hero-content{ 
+            width:50%; 
+        } 
+ 
+        .small-title{ 
+            color:#e89b28; 
+            font-size:13px; 
+            font-weight:bold; 
+            letter-spacing:2px; 
+            margin-bottom:15px; 
+        } 
+ 
+        .hero h1{ 
+            font-size:52px; 
+            line-height:1.1; 
+            color:#244b2c; 
+            margin-bottom:20px; 
+        } 
+ 
+        .hero h1 span{ 
+            color:#2f7d46; 
+        } 
+ 
+        .hero p{ 
+            color:#69766d; 
+            font-size:16px; 
+            line-height:1.8; 
+            max-width:520px; 
+            margin-bottom:30px; 
+        } 
+ 
+        .hero-button{ 
+            display:inline-block; 
+            background:#2f7d46; 
+            color:white; 
+            text-decoration:none; 
+            padding:13px 24px; 
+            border-radius:6px; 
+            font-size:14px; 
+            font-weight:bold; 
+            margin-right:10px; 
+        } 
+ 
+        .hero-button:hover{ 
+            background:#246337; 
+        } 
+ 
+ 
+        /* ================= HERO IMAGE ================= */ 
+ 
+        .hero-image{ 
+            width:45%; 
+        } 
+ 
+        .hero-image img{ 
+            width:100%; 
+            height:390px; 
+            object-fit:cover; 
+            border-radius:18px; 
+            box-shadow:0 15px 35px rgba(44,75,48,0.15); 
+        } 
+ 
+ 
+        /* ================= INTRO ================= */ 
+ 
+        .intro{ 
+            background:#eef6e9; 
+            text-align:center; 
+            padding:65px 7%; 
+        } 
+ 
+        .intro h2{ 
+            color:#244b2c; 
+            font-size:32px; 
+            margin-bottom:15px; 
+        } 
+ 
+        .intro h2 span{ 
+            color:#e89b28; 
+        } 
+ 
+        .intro p{ 
+            max-width:700px; 
+            margin:auto; 
+            color:#68766c; 
+            line-height:1.8; 
+            font-size:15px; 
+        } 
+ 
+ 
+        /* ================= OPTIONS ================= */ 
+ 
+        .options{ 
+            padding:70px 7%; 
+            text-align:center; 
+        } 
+ 
+        .section-title{ 
+            color:#244b2c; 
+            font-size:32px; 
+            margin-bottom:10px; 
+        } 
+ 
+        .section-text{ 
+            color:#78837b; 
+            font-size:14px; 
+            margin-bottom:40px; 
+        } 
+ 
+        .card-container{ 
+            display:grid; 
+            grid-template-columns:repeat(3,1fr); 
+            gap:25px; 
+        } 
+ 
+        .card{ 
+            background:white; 
+            border:1px solid #e5eadf; 
+            border-radius:12px; 
+            overflow:hidden; 
+            text-align:left; 
+            transition:0.3s; 
+        } 
+ 
+        .card:hover{ 
+            transform:translateY(-7px); 
+            box-shadow:0 12px 25px rgba(42,70,46,0.10); 
+        } 
+ 
+ 
+        /* ================= CARD IMAGE ================= */ 
+ 
+        .card-image{ 
+            width:100%; 
+            height:190px; 
+            overflow:hidden; 
+        } 
+ 
+        .card-image img{ 
+            width:100%; 
+            height:100%; 
+            object-fit:cover; 
+            transition:0.4s; 
+        } 
+ 
+        .card:hover .card-image img{ 
+            transform:scale(1.05); 
+        } 
+ 
+ 
+        /* ================= CARD CONTENT ================= */ 
+ 
+        .card-content{ 
+            padding:25px; 
+        } 
+ 
+        .icon{ 
+            width:55px; 
+            height:55px; 
+            display:flex; 
+            align-items:center; 
+            justify-content:center; 
+            border-radius:10px; 
+            background:#fff1d7; 
+            font-size:27px; 
+            margin-bottom:20px; 
+        } 
+ 
+        .card:nth-child(2) .icon{ 
+            background:#e1f1e6; 
+        } 
+ 
+        .card:nth-child(3) .icon{ 
+            background:#e9f4d9; 
+        } 
+ 
+        .card h3{ 
+            color:#244b2c; 
+            font-size:20px; 
+            margin-bottom:12px; 
+        } 
+ 
+        .card p{ 
+            color:#718077; 
+            font-size:14px; 
+            line-height:1.7; 
+            margin-bottom:20px; 
+        } 
+ 
+        .card a{ 
+            color:#2f7d46; 
+            text-decoration:none; 
+            font-size:13px; 
+            font-weight:bold; 
+        } 
+ 
+ 
+        /* ================= CALCULATOR ================= */ 
+ 
+        .calculator-section{ 
+            background:#244b2c; 
+            padding:75px 7%; 
+            display:flex; 
+            justify-content:center; 
+        } 
+ 
+        .calculator-box{ 
+            width:100%; 
+            max-width:950px; 
+            background:#ffffff; 
+            border-radius:15px; 
+            padding:40px; 
+            display:flex; 
+            justify-content:space-between; 
+            align-items:center; 
+            gap:50px; 
+        } 
+ 
+        .calculator-content{ 
+            width:50%; 
+        } 
+ 
+        .calculator-content h2{ 
+            color:#244b2c; 
+            font-size:30px; 
+            margin-bottom:15px; 
+        } 
+ 
+        .calculator-content h2 span{ 
+            color:#e89b28; 
+        } 
+ 
+        .calculator-content p{ 
+            color:#718077; 
+            font-size:14px; 
+            line-height:1.7; 
+            margin-bottom:20px; 
+        } 
+ 
+        .calculator-form{ 
+            width:45%; 
+        } 
+ 
+        .calculator-form label{ 
+            display:block; 
+            color:#526356; 
+            font-size:13px; 
+            font-weight:bold; 
+            margin-bottom:8px; 
+        } 
+ 
+        .calculator-form input{ 
+            width:100%; 
+            padding:13px; 
+            border:1px solid #d9e2d9; 
+            border-radius:6px; 
+            outline:none; 
+            font-size:14px; 
+            margin-bottom:15px; 
+        } 
+ 
+        .calculator-form input:focus{ 
+            border-color:#2f7d46; 
+        } 
+ 
+        .calculate-btn{ 
+            width:100%; 
+            border:none; 
+            padding:13px; 
+            border-radius:6px; 
+            background:#2f7d46; 
+            color:white; 
+            font-size:14px; 
+            font-weight:bold; 
+            cursor:pointer; 
+        } 
+ 
+        .calculate-btn:hover{ 
+            background:#246337; 
+        } 
+ 
+        .result{ 
+            margin-top:18px; 
+            padding:15px; 
+            background:#eef6e9; 
+            border-radius:8px; 
+            text-align:center; 
+            display:none; 
+        } 
+ 
+        .result h3{ 
+            color:#2f7d46; 
+            font-size:20px; 
+            margin-bottom:5px; 
+        } 
+ 
+        .result p{ 
+            color:#657269; 
+            font-size:13px; 
+        } 
+ 
+ 
+        /* ================= FACT SECTION ================= */ 
+ 
+        .fact-section{ 
+            padding:70px 7%; 
+            text-align:center; 
+        } 
+ 
+        .fact-box{ 
+            max-width:850px; 
+            margin:35px auto 0; 
+            background:#fff1d7; 
+            padding:35px; 
+            border-radius:12px; 
+            border-left:5px solid #e89b28; 
+        } 
+ 
+        .fact-icon{ 
+            font-size:35px; 
+            margin-bottom:15px; 
+        } 
+ 
+        .fact-box h3{ 
+            color:#244b2c; 
+            font-size:23px; 
+            margin-bottom:12px; 
+        } 
+ 
+        .fact-box p{ 
+            color:#68766c; 
+            line-height:1.8; 
+            font-size:14px; 
+        } 
+ 
+ 
+        /* ================= FOOTER ================= */ 
+ 
+        footer{ 
+            background:#244b2c; 
+            color:white; 
+            padding:30px 7%; 
+            display:flex; 
+            justify-content:space-between; 
+            align-items:center; 
+        } 
+ 
+        footer .footer-logo{ 
+            font-size:21px; 
+            font-weight:bold; 
+        } 
+ 
+        footer .footer-logo span{ 
+            color:#f0ae3c; 
+        } 
+ 
+        footer p{ 
+            font-size:12px; 
+            color:#d3dfd5; 
+        } 
+ 
+ 
+        /* ================= MOBILE ================= */ 
+ 
+        @media(max-width:800px){ 
+ 
+            header{ 
+                padding:0 5%; 
+            } 
+ 
+            nav{ 
+                display:none; 
+                position:absolute; 
+                top:75px; 
+                left:0; 
+                width:100%; 
+                background:white; 
+                padding:25px 0; 
+                border-bottom:1px solid #ddd; 
+            } 
+ 
+            nav.show{ 
+                display:block; 
+            } 
+ 
+            nav ul{ 
+                flex-direction:column; 
+                align-items:center; 
+                gap:20px; 
+            } 
+ 
+            .contact-btn{ 
+                display:none; 
+            } 
+ 
+            .menu-btn{ 
+                display:block; 
+            } 
+ 
+            .hero{ 
+                flex-direction:column; 
+                padding-top:110px; 
+            } 
+ 
+            .hero-content, 
+            .hero-image{ 
+                width:100%; 
+            } 
+ 
+            .hero h1{ 
+                font-size:40px; 
+            } 
+ 
+            .hero-image img{ 
+                height:300px; 
+            } 
+ 
+            .card-container{ 
+                grid-template-columns:1fr; 
+            } 
+ 
+            .card-image{ 
+                height:220px; 
+            } 
+ 
+            .calculator-box{ 
+                flex-direction:column; 
+                padding:30px 25px; 
+            } 
+ 
+            .calculator-content, 
+            .calculator-form{ 
+                width:100%; 
+            } 
+ 
+            footer{ 
+                flex-direction:column; 
+                gap:10px; 
+                text-align:center; 
+            } 
+ 
+        } 
+ 
+    </style> 
  
 </head> 
- 
  
 <body> 
  
  
-<!-- ========================= 
-     HEADER 
-========================= --> 
+    <!-- ================= HEADER ================= --> 
  
-<header> 
+    <header> 
  
-    <!-- LOGO --> 
+        <div class="logo"> 
+            Green<span>Pulse</span> 
+        </div> 
  
-    <div class="logo"> 
-        Eco<span>Volt</span> 
-    </div> 
+        <nav id="navbar"> 
  
+            <ul> 
  
-    <!-- NAVIGATION --> 
+                <li> 
+                    <a href="index.html">Home</a> 
+                </li> 
  
-    <nav id="navbar"> 
+                <li> 
+                    <a href="solar.html">Solar Energy</a> 
+                </li> 
  
-        <ul> 
+                <li> 
+                    <a href="wind.html">Wind Power</a> 
+                </li> 
  
-            <li> 
-                <a href="index.html" class="active"> 
-                    Home 
-                </a> 
-            </li> 
+                <li> 
+                    <a href="lifestyle.html">Green Lifestyle</a> 
+                </li> 
  
-            <li> 
-                <a href="solar.html"> 
-                    Solar Energy 
-                </a> 
-            </li> 
+            </ul> 
  
-            <li> 
-                <a href="wind.html"> 
-                    Wind Power 
-                </a> 
-            </li> 
+        </nav> 
  
-            <li> 
-                <a href="lifestyle.html"> 
-                    Green Lifestyle 
-                </a> 
-            </li> 
+        <a href="contact.html" class="contact-btn"> 
+            Contact Us 
+        </a> 
  
-        </ul> 
+        <button class="menu-btn" onclick="toggleMenu()"> 
+            ☰ 
+        </button> 
  
-    </nav> 
+    </header> 
  
  
-    <!-- CONTACT BUTTON --> 
+    <!-- ================= HERO ================= --> 
  
-    <a href="contact.html" class="header-btn"> 
-        Contact Us 
-    </a> 
+    <section class="hero"> 
  
+        <div class="hero-content"> 
  
-    <!-- MOBILE MENU --> 
+            <div class="small-title"> 
+                CLEAN ENERGY • BETTER FUTURE 
+            </div> 
  
-    <button class="menu-btn" onclick="toggleMenu()"> 
-        ☰ 
-    </button> 
+            <h1> 
+                Energy for a 
+                <span>Greener Tomorrow</span> 
+            </h1> 
  
-</header> 
+            <p> 
+                Discover how renewable energy and simple 
+                sustainable choices can help us build a cleaner, 
+                healthier and better future. 
+            </p> 
  
+            <a href="#explore" class="hero-button"> 
+                Explore Now 
+            </a> 
  
-<!-- ========================= 
-     DEMO CONTENT 
-========================= --> 
- 
-<main> 
- 
-<div> 
- <h1> 
-   Powering a 
-  <span>Greener Future</span> 
-   </h1> 
- 
- <p style="color:#6d897a;margin-top:12px;"> 
-  Clean Energy • Better Future 
-  </p> 
- 
- </div> 
- 
-</main> 
+        </div> 
  
  
-<!-- ========================= 
-     JAVASCRIPT 
-========================= --> 
+        <div class="hero-image"> 
  
-<script> 
+            <img src="images/saa.jpg" alt="Solar Energy"> 
  
-function toggleMenu(){ 
+        </div> 
  
-    document 
-        .getElementById("navbar") 
-        .classList 
-        .toggle("show"); 
+    </section> 
  
-} 
  
-</script> 
+    <!-- ================= INTRO ================= --> 
+ 
+    <section class="intro" id="about"> 
+ 
+        <h2> 
+            Why <span>Sustainable Energy?</span> 
+        </h2> 
+ 
+        <p> 
+            Sustainable energy comes from natural sources such as 
+            sunlight and wind. It helps reduce pollution, saves 
+            natural resources and creates a cleaner future for 
+            coming generations. 
+        </p> 
+ 
+    </section> 
+ 
+ 
+    <!-- ================= OPTIONS ================= --> 
+ 
+    <section class="options" id="explore"> 
+ 
+        <h2 class="section-title"> 
+            Explore Sustainable Energy 
+        </h2> 
+ 
+        <p class="section-text"> 
+            Choose a topic and learn more about a greener future. 
+        </p> 
+ 
+ 
+        <div class="card-container"> 
+ 
+ 
+            <!-- SOLAR --> 
+ 
+            <div class="card"> 
+ 
+                <div class="card-image"> 
+ 
+                    <img src="images/solar1.png" alt="Solar Panels"> 
+ 
+                </div> 
+ 
+                <div class="card-content"> 
+ 
+                    <div class="icon"> 
+                        ☀️ 
+                    </div> 
+ 
+                    <h3> 
+                        Solar Energy 
+                    </h3> 
+ 
+                    <p> 
+                        Learn how solar panels use sunlight to generate 
+                        clean electricity and discover their benefits. 
+                    </p> 
+ 
+                    <a href="solar.html"> 
+                        Explore Solar → 
+                    </a> 
+ 
+                </div> 
+ 
+            </div> 
+ 
+ 
+            <!-- WIND --> 
+ 
+            <div class="card"> 
+ 
+                <div class="card-image"> 
+ 
+                    <img src="images/wind.jpg" alt="Wind Turbines"> 
+ 
+                </div> 
+ 
+                <div class="card-content"> 
+ 
+                    <div class="icon"> 
+                        🌬️ 
+                    </div> 
+ 
+                    <h3> 
+                        Wind Power 
+                    </h3> 
+ 
+                    <p> 
+                        Understand how wind turbines convert wind into 
+                        useful electrical energy. 
+                    </p> 
+ 
+                    <a href="wind.html"> 
+                        Explore Wind → 
+                    </a> 
+ 
+                </div> 
+ 
+            </div> 
+ 
+ 
+            <!-- LIFESTYLE --> 
+ 
+            <div class="card"> 
+ 
+                <div class="card-image"> 
+ 
+                    <img src="images/green.jpg" alt="Green Lifestyle"> 
+ 
+                </div> 
+ 
+                <div class="card-content"> 
+ 
+                    <div class="icon"> 
+                        🌱 
+                    </div> 
+ 
+                    <h3> 
+                        Green Lifestyle 
+                    </h3> 
+ 
+                    <p> 
+                        Discover simple daily habits that can reduce 
+                        waste and help protect our environment. 
+                    </p> 
+ 
+                    <a href="lifestyle.html"> 
+                        Explore Lifestyle → 
+                    </a> 
+ 
+                </div> 
+ 
+            </div> 
+ 
+        </div> 
+ 
+    </section> 
+ 
+ 
+    <!-- ================= ENERGY CALCULATOR ================= --> 
+ 
+    <section class="calculator-section"> 
+ 
+        <div class="calculator-box"> 
+ 
+            <div class="calculator-content"> 
+ 
+                <h2> 
+                    Check Your <span>Energy Impact</span> 
+                </h2> 
+ 
+                <p> 
+                    Enter your monthly electricity usage and get a 
+                    simple estimate of how much carbon emission you 
+                    could reduce by using cleaner energy. 
+                </p> 
+ 
+                <p> 
+                    Try it yourself and see your Green Score. 
+                </p> 
+ 
+            </div> 
+ 
+ 
+            <div class="calculator-form"> 
+ 
+                <label for="units"> 
+                    Monthly Electricity Usage (Units) 
+                </label> 
+ 
+                <input 
+                    type="number" 
+                    id="units" 
+                    placeholder="Example: 250" 
+                    min="1" 
+                > 
+ 
+                <button class="calculate-btn" onclick="calculateImpact()"> 
+                    Calculate Impact 
+                </button> 
+ 
+ 
+                <div class="result" id="result"> 
+ 
+                    <h3 id="saving"> 
+                        0 kg CO₂ 
+                    </h3> 
+ 
+                    <p id="score"> 
+                        Your Green Score 
+                    </p> 
+ 
+                </div> 
+ 
+            </div> 
+ 
+        </div> 
+ 
+    </section> 
+ 
+ 
+    <!-- ================= DID YOU KNOW ================= --> 
+ 
+    <section class="fact-section"> 
+ 
+        <h2 class="section-title"> 
+            Did You Know? 
+        </h2> 
+ 
+        <p class="section-text"> 
+            A small change in the way we use energy can make a difference. 
+        </p> 
+ 
+ 
+        <div class="fact-box"> 
+ 
+            <div class="fact-icon"> 
+                🌍 
+            </div> 
+ 
+            <h3> 
+                Renewable Energy Comes From Nature 
+            </h3> 
+ 
+            <p> 
+                Solar energy comes from sunlight and wind power 
+                comes from moving air. Unlike fossil fuels, these 
+                sources are naturally renewed and can help reduce 
+                harmful emissions. 
+            </p> 
+ 
+        </div> 
+ 
+    </section> 
+ 
+ 
+    <!-- ================= FOOTER ================= --> 
+ 
+    <footer> 
+ 
+        <div class="footer-logo"> 
+            Green<span>Pulse</span> 
+        </div> 
+ 
+        <p> 
+            Clean Energy • Better Future 
+        </p> 
+ 
+        <p> 
+            © 2026 GreenPulse 
+        </p> 
+ 
+    </footer> 
+ 
+ 
+    <!-- ================= JAVASCRIPT ================= --> 
+ 
+    <script> 
+ 
+        /* MOBILE MENU */ 
+ 
+        function toggleMenu(){ 
+ 
+            var nav = document.getElementById("navbar"); 
+ 
+            nav.classList.toggle("show"); 
+ 
+        } 
+ 
+ 
+        /* ENERGY CALCULATOR */ 
+ 
+        function calculateImpact(){ 
+ 
+            var units = document.getElementById("units").value; 
+ 
+            if(units == "" || units <= 0){ 
+ 
+                alert("Please enter your monthly electricity usage."); 
+ 
+                return; 
+ 
+            } 
+ 
+ 
+            /* Simple estimated calculation */ 
+ 
+            var saving = units * 0.7; 
+            var score; 
+ 
+            if(units <= 150){ 
+ 
+                score = "Excellent Green Score 🌱"; 
+ 
+            } 
+ 
+            else if(units <= 300){ 
+ 
+                score = "Good Green Score 👍"; 
+ 
+            } 
+ 
+            else if(units <= 500){ 
+ 
+                score = "Average Green Score 🙂"; 
+ 
+            } 
+ 
+            else{ 
+ 
+                score = "Try Saving More Energy 💚"; 
+ 
+            } 
+ 
+ 
+            document.getElementById("saving").innerHTML = 
+                saving.toFixed(1) + " kg CO₂"; 
+ 
+            document.getElementById("score").innerHTML = 
+                score; 
+ 
+            document.getElementById("result").style.display = "block"; 
+ 
+        } 
+ 
+    </script> 
  
  
 </body> 
 </html>
-```
