@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoSphere | Solar Energy</title>
+
+<style>
+
+/* ================= BASIC ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fffaf0;
+    color:#263b2b;
+}
+
+
+/* ================= HEADER ================= */
+
+header{
+    height:75px;
+    width:100%;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+    border-bottom:1px solid #e6eadf;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#244b2c;
+}
+
+.logo span{
+    color:#e89b28;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#526356;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#e89b28;
+}
+
+.contact-btn{
+    background:#2f7d46;
+    color:white;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:6px;
+    font-size:14px;
+}
+
+.menu-btn{
+    display:none;
+    border:none;
+    background:none;
+    font-size:27px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:650px;
+    padding:120px 7% 60px;
+    display:grid;
+    grid-template-columns:45% 55%;
+    align-items:center;
+    gap:30px;
+}
+
+.hero-text{
+    padding-right:30px;
+}
+
+.tag{
+    display:inline-block;
+    color:#e89b28;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-family:Georgia, "Times New Roman", serif;
+    color:#244b2c;
+    font-size:54px;
+    line-height:1.08;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#2f7d46;
+}
+
+.hero p{
+    color:#68766c;
+    font-size:16px;
+    line-height:1.8;
+    max-width:500px;
+    margin-bottom:28px;
+}
+
+.learn-btn{
+    display:inline-block;
+    padding:13px 24px;
+    background:#2f7d46;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.learn-btn:hover{
+    background:#246337;
+}
+
+
+/* HERO IMAGE */
+
+.hero-picture{
+    position:relative;
+}
+
+.hero-picture img{
+    width:100%;
+    height:440px;
+    object-fit:cover;
+    border-radius:25px 25px 25px 70px;
+    box-shadow:0 18px 40px rgba(42,70,46,0.18);
+}
+
+.image-label{
+    position:absolute;
+    bottom:25px;
+    left:-20px;
+    background:white;
+    padding:18px 24px;
+    border-radius:10px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+}
+
+.image-label strong{
+    color:#244b2c;
+    display:block;
+    margin-bottom:4px;
+}
+
+.image-label span{
+    color:#78837b;
+    font-size:12px;
+}
+
+
+/* ================= INTRO ================= */
+
+.intro{
+    background:#244b2c;
+    padding:55px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+}
+
+.intro-text{
+    max-width:650px;
+}
+
+.intro h2{
+    color:white;
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:31px;
+    margin-bottom:12px;
+}
+
+.intro h2 span{
+    color:#f0ae3c;
+}
+
+.intro p{
+    color:#d3dfd5;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.sun-icon{
+    font-size:65px;
+}
+
+
+/* ================= STATS ================= */
+
+.stats{
+    padding:65px 7%;
+    text-align:center;
+}
+
+.section-title{
+    color:#244b2c;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.section-text{
+    color:#78837b;
+    font-size:14px;
+    margin-bottom:35px;
+}
+
+.stats-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat{
+    background:white;
+    border:1px solid #e5eadf;
+    padding:30px 20px;
+    border-radius:12px;
+}
+
+.stat h3{
+    color:#2f7d46;
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.stat p{
+    color:#68766c;
+    font-size:13px;
+}
+
+
+/* ================= HOW IT WORKS ================= */
+
+.works{
+    background:#eef6e9;
+    padding:70px 7%;
+}
+
+.steps{
+    max-width:1000px;
+    margin:45px auto 0;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    position:relative;
+}
+
+.steps:before{
+    content:"";
+    position:absolute;
+    top:28px;
+    left:10%;
+    right:10%;
+    height:2px;
+    background:#c9ddc9;
+}
+
+.step{
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+.step-number{
+    width:56px;
+    height:56px;
+    margin:auto;
+    border-radius:50%;
+    background:#2f7d46;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    border:5px solid #eef6e9;
+}
+
+.step h3{
+    color:#244b2c;
+    margin-top:20px;
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+.step p{
+    color:#718077;
+    font-size:13px;
+    line-height:1.7;
+    padding:0 10px;
+}
+
+
+/* ================= TYPES ================= */
+
+.types{
+    padding:70px 7%;
+}
+
+.type-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    max-width:1050px;
+    margin:40px auto 0;
+}
+
+.type-card{
+    background:white;
+    border:1px solid #e5eadf;
+    border-radius:15px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:45% 55%;
+    min-height:230px;
+    transition:0.3s;
+}
+
+.type-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(42,70,46,0.10);
+}
+
+.type-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.type-content{
+    padding:25px;
+}
+
+.type-content h3{
+    color:#244b2c;
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.type-content p{
+    color:#718077;
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* ================= BENEFITS ================= */
+
+.benefits{
+    background:#fff1d7;
+    padding:70px 7%;
+}
+
+.benefit-layout{
+    max-width:1000px;
+    margin:40px auto 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.benefit{
+    background:white;
+    padding:28px;
+    border-radius:12px;
+    display:flex;
+    gap:20px;
+    border:1px solid #eee4d2;
+}
+
+.benefit-icon{
+    min-width:52px;
+    height:52px;
+    background:#e1f1e6;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+.benefit h3{
+    color:#244b2c;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.benefit p{
+    color:#718077;
+    font-size:13px;
+    line-height:1.7;
+}
+
+
+/* ================= APPLICATION ================= */
+
+.applications{
+    padding:70px 7%;
+}
+
+.application-grid{
+    max-width:1050px;
+    margin:40px auto 0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.application{
+    position:relative;
+    height:310px;
+    border-radius:14px;
+    overflow:hidden;
+    background:#244b2c;
+    padding:30px;
+}
+
+.application:nth-child(2){
+    background:#2f7d46;
+}
+
+.application:nth-child(3){
+    background:#6a8f5b;
+}
+
+.application-content{
+    padding:0;
+}
+
+.application h3{
+    color:white;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.application p{
+    color:#e4eee5;
+    font-size:13px;
+    line-height:1.8;
+}
+
+
+/* ================= COMPARISON ================= */
+
+.comparison{
+    background:#eef6e9;
+    padding:70px 7%;
+}
+
+.compare-box{
+    max-width:850px;
+    margin:35px auto 0;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #dfe8df;
+}
+
+.compare-row{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    border-bottom:1px solid #e5eadf;
+}
+
+.compare-row:last-child{
+    border-bottom:none;
+}
+
+.compare-row div{
+    padding:17px;
+    font-size:13px;
+    color:#68766c;
+}
+
+.compare-row div:first-child{
+    font-weight:bold;
+    color:#244b2c;
+}
+
+.compare-heading{
+    background:#244b2c;
+}
+
+.compare-heading div{
+    color:white !important;
+    font-weight:bold !important;
+}
+
+
+/* ================= CTA ================= */
+
+.cta{
+    padding:75px 7%;
+    text-align:center;
+}
+
+.cta-box{
+    max-width:900px;
+    margin:auto;
+    background:#2f7d46;
+    border-radius:18px;
+    padding:50px 30px;
+}
+
+.cta-box h2{
+    color:white;
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.cta-box p{
+    color:#dce9de;
+    max-width:650px;
+    margin:0 auto 25px;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.cta-button{
+    display:inline-block;
+    background:white;
+    color:#244b2c;
+    padding:13px 25px;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#244b2c;
+    color:white;
+    padding:30px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.footer-logo{
+    font-size:21px;
+    font-weight:bold;
+}
+
+.footer-logo span{
+    color:#f0ae3c;
+}
+
+footer p{
+    color:#d3dfd5;
+    font-size:12px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+    header{
+        padding:0 5%;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:white;
+        padding:25px;
+    }
+
+    nav.show{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .contact-btn{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        padding-top:110px;
+    }
+
+    .hero-text{
+        padding-right:0;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero-picture img{
+        height:320px;
+    }
+
+    .image-label{
+        left:15px;
+    }
+
+    .intro{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .stats-container{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .steps:before{
+        display:none;
+    }
+
+    .type-grid{
+        grid-template-columns:1fr;
+    }
+
+    .benefit-layout{
+        grid-template-columns:1fr;
+    }
+
+    .application-grid{
+        grid-template-columns:1fr;
+    }
+
+    .compare-row{
+        grid-template-columns:1fr;
+    }
+
+    .compare-heading{
+        display:none;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        Eco<span>Sphere</span>
+    </div>
+
+    <nav id="navbar">
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="solar.html">Solar Energy</a>
+            </li>
+
+            <li>
+                <a href="wind.html">Wind Power</a>
+            </li>
+
+            <li>
+                <a href="lifestyle.html">Green Lifestyle</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <a href="contact.html" class="contact-btn">
+        Contact Us
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <div class="tag">
+            POWER FROM THE SUN
+        </div>
+
+        <h1>
+            Let The Sun
+            <span>Power Your Future</span>
+        </h1>
+
+        <p>
+            Solar energy transforms sunlight into useful electricity.
+            Discover how solar technology can support cleaner energy
+            and a more sustainable way of living.
+        </p>
+
+        <a href="#explore" class="learn-btn">
+            Explore Solar Energy
+        </a>
+
+    </div>
+
+
+    <div class="hero-picture">
+
+        <img
+            src="images/solar.jpg"
+            alt="Modern Solar Energy">
+
+        <div class="image-label">
+
+            <strong>Clean • Renewable • Natural</strong>
+
+            <span>Energy inspired by sunlight</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+    <div class="intro-text">
+
+        <h2>
+            A brighter source of <span>clean energy.</span>
+        </h2>
+
+        <p>
+            Solar energy comes from the sun and can be converted
+            into electricity using solar panels. It can be used
+            in homes, businesses, industries and large-scale
+            solar power projects.
+        </p>
+
+    </div>
+
+    <div class="sun-icon">
+        ☀️
+    </div>
+
+</section>
+
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats" id="explore">
+
+    <h2 class="section-title">
+        Solar Energy at a Glance
+    </h2>
+
+    <p class="section-text">
+        Some simple reasons why solar power is important.
+    </p>
+
+
+    <div class="stats-container">
+
+        <div class="stat">
+
+            <h3>☀️</h3>
+
+            <p>
+                Uses sunlight as its primary energy source
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <h3>♻️</h3>
+
+            <p>
+                Renewable source of energy
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <h3>🌱</h3>
+
+            <p>
+                Supports cleaner energy production
+            </p>
+
+        </div>
+
+
+        <div class="stat">
+
+            <h3>🏠</h3>
+
+            <p>
+                Can be used for homes and businesses
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="works">
+
+    <h2 class="section-title" style="text-align:center;">
+        How Solar Energy Works
+    </h2>
+
+    <p class="section-text" style="text-align:center;">
+        From sunlight to electricity in four simple steps.
+    </p>
+
+
+    <div class="steps">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <h3>
+                Sunlight
+            </h3>
+
+            <p>
+                Sunlight reaches the surface of solar panels.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <h3>
+                Solar Cells
+            </h3>
+
+            <p>
+                Photovoltaic cells absorb sunlight and generate
+                electrical energy.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <h3>
+                Inverter
+            </h3>
+
+            <p>
+                An inverter converts the electricity into a form
+                suitable for normal use.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                04
+            </div>
+
+            <h3>
+                Power
+            </h3>
+
+            <p>
+                The electricity can power appliances and buildings.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= TYPES ================= -->
+
+<section class="types">
+
+    <h2 class="section-title" style="text-align:center;">
+        Different Ways to Use Solar Energy
+    </h2>
+
+    <p class="section-text" style="text-align:center;">
+        Solar technology can be used at different scales.
+    </p>
+
+
+    <div class="type-grid">
+
+
+        <div class="type-card">
+
+            <img src="images/roof.jpg" alt="Rooftop Solar">
+
+            <div class="type-content">
+
+                <h3>
+                    Rooftop Solar
+                </h3>
+
+                <p>
+                    Panels installed on rooftops can generate
+                    electricity for homes, schools and offices.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="type-card">
+
+            <img src="images/Farm.jpg" alt="Solar Farm">
+
+            <div class="type-content">
+
+                <h3>
+                    Solar Farms
+                </h3>
+
+                <p>
+                    Large solar installations use many panels
+                    together to produce electricity at scale.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="type-card">
+
+            <img src="images/com.jpg" alt="Commercial Solar">
+
+            <div class="type-content">
+
+                <h3>
+                    Commercial Solar
+                </h3>
+
+                <p>
+                    Businesses can use solar systems to generate
+                    electricity for their buildings and operations.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="type-card">
+
+            <img src="images/tec.jpg" alt="Solar Technology">
+
+            <div class="type-content">
+
+                <h3>
+                    Solar Technology
+                </h3>
+
+                <p>
+                    Solar power is also used in street lights,
+                    water heating systems and other applications.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= BENEFITS ================= -->
+
+<section class="benefits">
+
+    <h2 class="section-title" style="text-align:center;">
+        Why Choose Solar Energy?
+    </h2>
+
+    <p class="section-text" style="text-align:center;">
+        Solar power can offer environmental and practical advantages.
+    </p>
+
+
+    <div class="benefit-layout">
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                ☀️
+            </div>
+
+            <div>
+
+                <h3>
+                    Renewable
+                </h3>
+
+                <p>
+                    Sunlight is naturally replenished, making solar
+                    energy a renewable source of power.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                🌿
+            </div>
+
+            <div>
+
+                <h3>
+                    Cleaner Energy
+                </h3>
+
+                <p>
+                    Solar electricity does not produce direct air
+                    pollution while the panels are generating power.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                💰
+            </div>
+
+            <div>
+
+                <h3>
+                    Energy Savings
+                </h3>
+
+                <p>
+                    Generating electricity where it is used can help
+                    households and businesses manage energy costs.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                🔋
+            </div>
+
+            <div>
+
+                <h3>
+                    Energy Storage
+                </h3>
+
+                <p>
+                    Solar systems can also work with batteries to
+                    store electricity for later use.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= APPLICATIONS ================= -->
+
+<section class="applications">
+
+    <h2 class="section-title" style="text-align:center;">
+        Solar Energy in Everyday Life
+    </h2>
+
+    <p class="section-text" style="text-align:center;">
+        Solar energy is becoming useful in many parts of everyday life.
+        It can provide clean electricity, reduce dependence on conventional
+        power sources and support a more sustainable lifestyle.
+    </p>
+
+
+    <div class="application-grid">
+
+
+        <div class="application">
+
+            <div class="application-content">
+
+                <h3>
+                    Homes
+                </h3>
+
+                <p>
+                    Solar panels can be installed on rooftops to generate
+                    electricity for lights, fans, appliances and other
+                    household needs. Home solar systems can also be combined
+                    with batteries for storing electricity.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="application">
+
+            <div class="application-content">
+
+                <h3>
+                    Schools & Offices
+                </h3>
+
+                <p>
+                    Schools, offices and commercial buildings can use solar
+                    power for daily electricity requirements. Using rooftop
+                    solar can help these buildings make better use of available
+                    space while producing renewable electricity.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="application">
+
+            <div class="application-content">
+
+                <h3>
+                    Solar Technology
+                </h3>
+
+                <p>
+                    Solar energy is also used in street lights, water heating,
+                    calculators, outdoor lighting and other useful technologies.
+                    These applications show how sunlight can be converted into
+                    practical energy for everyday activities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= COMPARISON ================= -->
+
+<section class="comparison">
+
+    <h2 class="section-title" style="text-align:center;">
+        Solar Energy vs Traditional Energy
+    </h2>
+
+    <p class="section-text" style="text-align:center;">
+        A simple comparison of two different energy approaches.
+    </p>
+
+
+    <div class="compare-box">
+
+
+        <div class="compare-row compare-heading">
+
+            <div>
+                Feature
+            </div>
+
+            <div>
+                Solar Energy
+            </div>
+
+            <div>
+                Fossil Fuel Energy
+            </div>
+
+        </div>
+
+
+        <div class="compare-row">
+
+            <div>
+                Main Source
+            </div>
+
+            <div>
+                Sunlight
+            </div>
+
+            <div>
+                Coal, Oil & Gas
+            </div>
+
+        </div>
+
+
+        <div class="compare-row">
+
+            <div>
+                Renewable
+            </div>
+
+            <div>
+                Yes
+            </div>
+
+            <div>
+                No
+            </div>
+
+        </div>
+
+
+        <div class="compare-row">
+
+            <div>
+                Direct Air Pollution During Generation
+            </div>
+
+            <div>
+                Very Low
+            </div>
+
+            <div>
+                Higher
+            </div>
+
+        </div>
+
+
+        <div class="compare-row">
+
+            <div>
+                Fuel Required
+            </div>
+
+            <div>
+                Sunlight
+            </div>
+
+            <div>
+                Fossil Fuels
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="cta-box">
+
+        <h2>
+            A Brighter Future Starts With Clean Energy
+        </h2>
+
+        <p>
+            Solar energy is one of the ways we can use natural
+            resources to create a more sustainable energy future.
+            Explore more renewable energy ideas with EcoSphere.
+        </p>
+
+        <a href="index.html" class="cta-button">
+            Back to EcoSphere
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        Eco<span>Sphere</span>
+    </div>
+
+    <p>
+        Clean Energy • Better Future
+    </p>
+
+    <p>
+        © 2026 EcoSphere
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function toggleMenu(){
+
+    var nav = document.getElementById("navbar");
+
+    nav.classList.toggle("show");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
