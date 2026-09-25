@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoSphere | Wind Power</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fffaf0;
+    color:#263b2b;
+}
+
+header{
+    height:70px;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+    border-bottom:1px solid #ddd;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#244b2c;
+}
+
+.logo span{
+    color:#e89b28;
+}
+
+nav a{
+    text-decoration:none;
+    color:#526356;
+    margin:0 15px;
+    font-size:14px;
+}
+
+.contact{
+    background:#2f7d46;
+    color:white;
+    padding:10px 18px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.hero{
+    min-height:550px;
+    padding:70px 8%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:40px;
+}
+
+.tag{
+    color:#e89b28;
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+h1{
+    font-family:Georgia,serif;
+    font-size:50px;
+    color:#244b2c;
+    margin-bottom:20px;
+}
+
+h1 span{
+    color:#2f7d46;
+}
+
+.hero p{
+    color:#68766c;
+    line-height:1.7;
+    max-width:500px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#2f7d46;
+    color:white;
+    padding:12px 22px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.hero img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    border-radius:20px 20px 20px 60px;
+}
+
+.intro{
+    background:#244b2c;
+    color:white;
+    padding:50px 8%;
+    text-align:center;
+}
+
+.intro h2{
+    font-family:Georgia,serif;
+    margin-bottom:12px;
+}
+
+.intro p{
+    color:#d3dfd5;
+    max-width:700px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.section{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.section h2{
+    color:#244b2c;
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.section > p{
+    color:#718077;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:28px 20px;
+    border:1px solid #e4e8df;
+    border-radius:12px;
+}
+
+.card h3{
+    color:#2f7d46;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#718077;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.types{
+    background:#eef6e9;
+}
+
+.type-box{
+    max-width:850px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.type-box img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.type-text{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:left;
+}
+
+.type-text h3{
+    color:#244b2c;
+    margin-bottom:12px;
+}
+
+.type-text p{
+    color:#718077;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* NEW SECTION */
+
+.wind-info{
+    padding:60px 8%;
+    background:white;
+}
+
+.wind-info h2{
+    text-align:center;
+    color:#244b2c;
+    font-family:Georgia,serif;
+    margin-bottom:30px;
+}
+
+.info-content{
+    max-width:950px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.info-content img{
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    border-radius:14px;
+}
+
+.info-text h3{
+    color:#2f7d46;
+    margin-bottom:12px;
+}
+
+.info-text p{
+    color:#68766c;
+    line-height:1.7;
+    font-size:15px;
+    margin-bottom:15px;
+}
+
+.future{
+    background:#fff1d7;
+    padding:55px 8%;
+    text-align:center;
+}
+
+.future h2{
+    color:#244b2c;
+    font-family:Georgia,serif;
+    margin-bottom:15px;
+}
+
+.future p{
+    max-width:700px;
+    margin:auto;
+    color:#68766c;
+    line-height:1.7;
+}
+
+footer{
+    background:#244b2c;
+    color:white;
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer span{
+    color:#f0ae3c;
+}
+
+@media(max-width:800px){
+    nav{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:40px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .type-box,
+    .info-content{
+        grid-template-columns:1fr;
+    }
+
+    footer{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Eco<span>Sphere</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="solar energy.html">Solar Energy</a>
+        <a href="wind.html">Wind Power</a>
+        <a href="lifestyle.html">Green Lifestyle</a>
+    </nav>
+
+    <a href="contact.html" class="contact">Contact</a>
+</header>
+
+<section class="hero">
+
+    <div>
+        <div class="tag">WIND ENERGY</div>
+
+        <h1>Power From The <span>Wind</span></h1>
+
+        <p>
+            Wind energy uses the natural movement of air
+            to create clean electricity. It is a simple,
+            renewable source of power for a greener future.
+        </p>
+
+        <a href="#learn" class="btn">Learn More</a>
+    </div>
+
+  <img src="images/wind.jpg" alt="Wind Turbines">
+
+</section>
+
+<section class="intro">
+    <h2>Turning Wind Into Energy</h2>
+
+    <p>
+        Wind turbines capture moving air with their blades.
+        The rotation runs a generator and produces electricity.
+    </p>
+</section>
+
+<section class="section" id="learn">
+
+    <h2>Why Wind Energy?</h2>
+
+    <p>A clean and natural way to produce electricity.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌬️ Renewable</h3>
+            <p>
+                Wind is naturally available and can be used
+                again and again.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Clean Power</h3>
+            <p>
+                Wind turbines generate electricity without
+                burning fuel during operation.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌱 Better Future</h3>
+            <p>
+                Wind power can support cleaner and more
+                sustainable energy systems.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section types">
+
+    <h2>Types of Wind Energy</h2>
+
+    <p>Wind turbines can be used in different locations.</p>
+
+    <div class="type-box">
+
+        <img src="images/osho.jpg" alt="Wind Farm">
+
+
+        <div class="type-text">
+            <h3>Onshore & Offshore</h3>
+
+            <p>
+                Onshore turbines are built on land, while
+                offshore turbines are placed in water.
+                Both use strong winds to generate electricity.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- NEW IMAGE + DETAILS -->
+
+<section class="wind-info">
+
+    <h2>Wind Energy In Daily Life</h2>
+
+    <div class="info-content">
+
+ <img src="images/water.jpg" alt="Wind Turbines">
+
+
+        <div class="info-text">
+
+            <h3>Clean Energy For Communities</h3>
+
+            <p>
+                Wind power can provide electricity to homes,
+                businesses and large communities. It helps
+                reduce the need for traditional fuel-based power.
+            </p>
+
+            <p>
+                As technology improves, modern wind turbines
+                are becoming more efficient and useful for
+                creating a cleaner energy system.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="future">
+
+    <h2>Wind Energy For Tomorrow</h2>
+
+    <p>
+        With modern technology, wind power can become
+        an important part of a cleaner energy future.
+    </p>
+
+</section>
+
+<footer>
+
+    <div>Eco<span>Sphere</span></div>
+
+    <p>Clean Energy • Better Future</p>
+
+    <p>© 2026 EcoSphere</p>
+
+</footer>
+
+</body>
+</html>
