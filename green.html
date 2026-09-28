@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoSphere | Green Lifestyle</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#fffaf0;
+    color:#263b2b;
+}
+
+header{
+    height:70px;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+    border-bottom:1px solid #ddd;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#244b2c;
+}
+
+.logo span{
+    color:#e89b28;
+}
+
+nav a{
+    text-decoration:none;
+    color:#526356;
+    margin:0 15px;
+    font-size:14px;
+}
+
+/* INTRO */
+
+.lifestyle-intro{
+    padding:75px 8%;
+    background:#eef6e9;
+    text-align:center;
+}
+
+.small-title{
+    color:#e89b28;
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.lifestyle-intro h1{
+    font-family:Georgia,serif;
+    font-size:48px;
+    color:#244b2c;
+    margin-bottom:18px;
+}
+
+.lifestyle-intro h1 span{
+    color:#2f7d46;
+}
+
+.lifestyle-intro p{
+    max-width:700px;
+    margin:auto;
+    color:#68766c;
+    line-height:1.7;
+    font-size:15px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:#2f7d46;
+    color:white;
+    padding:12px 22px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* MAIN SECTION */
+
+.life-section{
+    padding:60px 8%;
+    background:white;
+}
+
+.life-section h2{
+    text-align:center;
+    color:#244b2c;
+    font-family:Georgia,serif;
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.life-section > p{
+    text-align:center;
+    color:#718077;
+    margin-bottom:35px;
+}
+
+.life-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    max-width:1050px;
+    margin:auto;
+}
+
+.life-card{
+    background:#fffaf0;
+    padding:28px 22px;
+    border:1px solid #e4e8df;
+    border-radius:12px;
+}
+
+.life-card h3{
+    color:#2f7d46;
+    margin-bottom:12px;
+}
+
+.life-card p{
+    color:#718077;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* IMAGE SECTION */
+
+.eco-home{
+    background:#eef6e9;
+    padding:60px 8%;
+}
+
+.eco-content{
+    max-width:950px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.eco-content img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:15px 50px 15px 15px;
+}
+
+.eco-text{
+    background:white;
+    padding:28px;
+    border-radius:12px;
+}
+
+.eco-text h2{
+    color:#244b2c;
+    font-family:Georgia,serif;
+    margin-bottom:15px;
+}
+
+.eco-text p{
+    color:#68766c;
+    line-height:1.7;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+/* DAILY HABITS */
+
+.habits{
+    padding:60px 8%;
+    background:white;
+    text-align:center;
+}
+
+.habits h2{
+    color:#244b2c;
+    font-family:Georgia,serif;
+    margin-bottom:12px;
+    font-size:30px;
+}
+
+.habits > p{
+    color:#718077;
+    margin-bottom:30px;
+}
+
+.habit-boxes{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.habit{
+    padding:25px;
+    border:1px solid #e4e8df;
+    border-radius:12px;
+    text-align:left;
+    background:#fffaf0;
+}
+
+.habit h3{
+    color:#2f7d46;
+    margin-bottom:10px;
+}
+
+.habit p{
+    color:#718077;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* MESSAGE */
+
+.green-message{
+    background:#244b2c;
+    color:white;
+    padding:55px 8%;
+    text-align:center;
+}
+
+.green-message h2{
+    font-family:Georgia,serif;
+    margin-bottom:15px;
+}
+
+.green-message p{
+    max-width:700px;
+    margin:auto;
+    color:#d3dfd5;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+    background:#244b2c;
+    color:white;
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer span{
+    color:#f0ae3c;
+}
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .lifestyle-intro h1{
+        font-size:38px;
+    }
+
+    .life-cards{
+        grid-template-columns:1fr;
+    }
+
+    .eco-content{
+        grid-template-columns:1fr;
+    }
+
+    .habit-boxes{
+        grid-template-columns:1fr;
+    }
+
+    footer{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">Eco<span>Sphere</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="solar energy.html">Solar Energy</a>
+        <a href="wind.html">Wind Power</a>
+        <a href="green.html">Green Lifestyle</a>
+    </nav>
+
+</header>
+
+
+<section class="lifestyle-intro">
+
+    <div class="small-title">GREEN LIFESTYLE</div>
+
+    <h1>Live Green, <span>Live Better</span></h1>
+
+    <p>
+        A green lifestyle means making simple choices that are
+        better for nature and our everyday surroundings. Small
+        changes in the way we travel, shop, eat and use energy
+        can help create a cleaner and healthier future.
+    </p>
+
+    <a href="#habits" class="btn">Explore Green Living</a>
+
+</section>
+
+
+<section class="life-section">
+
+    <h2>What Is A Green Lifestyle?</h2>
+
+    <p>
+        Simple habits can make everyday living more sustainable.
+    </p>
+
+    <div class="life-cards">
+
+        <div class="life-card">
+            <h3>🌱 Save Resources</h3>
+            <p>
+                Using water, electricity and other resources
+                carefully helps reduce unnecessary waste and
+                supports a more sustainable way of living.
+            </p>
+        </div>
+
+        <div class="life-card">
+            <h3>♻️ Reduce Waste</h3>
+            <p>
+                Reusing useful items, avoiding unnecessary
+                plastic and recycling materials can help keep
+                our surroundings cleaner.
+            </p>
+        </div>
+
+        <div class="life-card">
+            <h3>🚲 Choose Better</h3>
+            <p>
+                Walking, cycling, public transport and other
+                responsible choices can reduce environmental
+                impact in daily life.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="eco-home">
+
+    <div class="eco-content">
+
+    <img src="images/gol.jpg"  alt="Green Plants">
+
+
+             
+        <div class="eco-text">
+
+            <h2>Eco-Friendly Living At Home</h2>
+
+            <p>
+                A sustainable lifestyle can begin at home.
+                Switching off unused lights, saving water and
+                choosing energy-efficient appliances are simple
+                ways to use fewer resources.
+            </p>
+
+            <p>
+                Plants, natural lighting and reusable products
+                can also make everyday spaces more comfortable
+                while encouraging environmentally responsible
+                habits.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="habits" id="habits">
+
+    <h2>Simple Green Habits</h2>
+
+    <p>
+        Small actions today can create positive changes for tomorrow.
+    </p>
+
+    <div class="habit-boxes">
+
+        <div class="habit">
+            <h3>💧 Save Water</h3>
+            <p>
+                Turn off taps when water is not needed and avoid
+                wasting water during daily activities.
+            </p>
+        </div>
+
+        <div class="habit">
+            <h3>💡 Save Electricity</h3>
+            <p>
+                Switch off lights, fans and electronic devices
+                when they are not being used.
+            </p>
+        </div>
+
+        <div class="habit">
+            <h3>🛍️ Reusable Products</h3>
+            <p>
+                Reusable bottles, bags and containers can reduce
+                the need for many disposable products.
+            </p>
+        </div>
+
+        <div class="habit">
+            <h3>🌿 Grow Green</h3>
+            <p>
+                Growing plants around homes and workplaces can
+                create greener and more pleasant surroundings.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="eco-home">
+
+    <div class="eco-content">
+
+        <div class="eco-text">
+
+            <h2>Building A Greener Future</h2>
+
+            <p>
+                Green living is not about changing everything at
+                once. It is about making better choices whenever
+                possible and developing habits that can continue
+                for a long time.
+            </p>
+
+            <p>
+                When many people adopt small sustainable habits,
+                these actions can contribute to cleaner cities,
+                less waste and a healthier environment.
+            </p>
+
+        </div>
+
+       <img src="images/farm.jpg"  alt="Eco Friendly Lifestyle">
+
+
+             
+
+    </div>
+
+</section>
+
+
+<section class="green-message">
+
+    <h2>Everyday Choices Matter</h2>
+
+    <p>
+        A greener lifestyle starts with simple actions.
+        Save energy, reduce waste, protect nature and make
+        responsible choices for a better tomorrow.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <div>Eco<span>Sphere</span></div>
+
+    <p>Clean Energy • Better Future</p>
+
+    <p>© 2026 EcoSphere</p>
+
+</footer>
+
+</body>
+</html>
